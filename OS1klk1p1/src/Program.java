@@ -27,7 +27,7 @@ import java.util.LinkedList;
  */
 public class Program {
 
-	//POZADINSKI SE NE CEKAJU KADA SE GASI VM
+	
 	public static void main(String[] args) {
 		
 		Suma suma = new Suma();
@@ -57,15 +57,12 @@ public class Program {
 		
 		for(int i = 0; i < 12 ; i++) {
 			try {
-				izvidjaciPecurke.get(i).join();
-				//izvidjaciDrva.get(i).join; // join za runnable
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
+				izvidjaciPecurke.get(i).join();				
+			} catch (InterruptedException e) {				
 				e.printStackTrace();
 			}
 		}
-		
-		
+				
 		kamp.ispis();
 		
 		System.err.println("Main se zavrsio!!!");

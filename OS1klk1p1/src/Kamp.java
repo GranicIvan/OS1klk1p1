@@ -26,7 +26,7 @@ public class Kamp {
 	}
 	
 	
-	private void stampajPoruku(String poruka) {
+	synchronized private void stampajPoruku(String poruka) {
 		System.out.printf("%-12s %-20s Stanje u kampu: pecurke:%3d  drva:%3d %n",
 				Thread.currentThread().getName(),
 				poruka,
